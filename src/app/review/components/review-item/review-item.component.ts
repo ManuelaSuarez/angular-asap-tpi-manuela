@@ -14,7 +14,7 @@ export class ReviewItemComponent {
 
   constructor(private router: Router) {}
 
-  onReviewClick(id: number) {
+  onReviewClick(id: string) {
     this.router.navigate(['/sidebar/reviewDetail', id])
   }
 

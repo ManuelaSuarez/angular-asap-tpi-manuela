@@ -1,14 +1,14 @@
 .sidebar-layout {
-  background-color: #f1f5f9;
+  background-color: #fff1cb;
   overflow-y: scroll;
   width: 100vw;
   height: 100vh;
   -webkit-font-smoothing: antialiased;
-  color: #cbd5e1;
+  color: #9376E0;
 }
 
 .sidebar-layout::selection {
-  background-color: #2563eb;
+  background-color: #b7a3e3;
   color: white;
 }
 
@@ -21,10 +21,10 @@
 
 .sidebar-menu {
   width: 220px;
-  background-color: #B7A3E3;
+  background-color: #ff8f8f;
   min-height: 100vh;
   z-index: 10;
-  color: #cbd5e1;
+  color: white;
   position: fixed;
   left: 0;
   height: 100vh;
@@ -34,7 +34,7 @@
 .sidebar-content {
   margin-left: 220px;
   padding: 1rem;
-  background-color: #FFF1CB;
+  background-color: #c2e2fa;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

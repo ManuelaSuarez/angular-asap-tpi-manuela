@@ -12,21 +12,21 @@ import { IMenuOption } from '@app/sidebar/interfaces/menu-option.interface'
 export class SidebarOptionsComponent {
   menuOptions: IMenuOption[] = [
     {
-      icon: "trending_up",
+      icon: "auto_stories",
       label: "All books",
-      subLabel: "Los más populares",
+      subLabel: "Find the perfect one for you!",
       route: "/sidebar/allBooks"
     },
     {
-      icon: "search",
+      icon: "reviews",
       label: "My reviews",
-      subLabel: "Encuentra tus gifs",
+      subLabel: "Remember what you liked! or disliked...",
       route: "/sidebar/myReviews"
     },
     {
-      icon: "search",
+      icon: "draw",
       label: "New review",
-      subLabel: "Encuentra tus gifs",
+      subLabel: "Feeling inspired?",
       route: "/sidebar/newReview"
     }
   ]

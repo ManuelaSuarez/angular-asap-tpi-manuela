@@ -19,7 +19,7 @@ export default class ReviewDetailComponent {
   review = signal<IReview | null>(null)
 
   constructor() {
-    const reviewId = Number(this.route.snapshot.paramMap.get('id'))
+    const reviewId = this.route.snapshot.paramMap.get('id')
     if (reviewId) {
       const foundReview = this.reviewService.getReviewById(reviewId)
       if (foundReview) {

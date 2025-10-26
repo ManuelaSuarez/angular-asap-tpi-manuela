@@ -8,6 +8,7 @@
   font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  color: #9376E0;
 }
 
 .new-review__form {
@@ -24,23 +25,22 @@
   display: block;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #374151;
+  color: #555555;
   margin-bottom: 0.5rem;
 }
 
 .new-review__input {
   width: 100%;
   padding: 0.5rem 1rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid #fff1cb;
   border-radius: 0.5rem;
   font-size: 1rem;
 }
 
 .new-review__input:focus {
   outline: none;
-  ring: 2px;
-  ring-color: #3b82f6;
-  border-color: transparent;
+  border-color: #b7a3e3;
+  box-shadow: 0 0 0 3px rgba(183, 163, 227, 0.1);
 }
 
 .new-review__dropdown {
@@ -49,7 +49,7 @@
   width: 100%;
   margin-top: 0.25rem;
   background-color: white;
-  border: 1px solid #d1d5db;
+  border: 2px solid #fff1cb;
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   max-height: 15rem;
@@ -65,7 +65,7 @@
 }
 
 .new-review__dropdown-item:hover {
-  background-color: #f3f4f6;
+  background-color: #c2e2fa;
 }
 
 .new-review__dropdown-image {
@@ -98,7 +98,11 @@
 .new-review__star-icon {
   width: 2rem;
   height: 2rem;
-  transition: color 0.2s;
+  transition: all 0.2s;
+}
+
+.new-review__star-icon:hover {
+  color: #fbbf24;
 }
 
 .new-review__star-icon--filled {
@@ -112,17 +116,17 @@
 .new-review__textarea {
   width: 100%;
   padding: 0.5rem 1rem;
-  border: 1px solid #d1d5db;
+  border: 2px solid #fff1cb;
   border-radius: 0.5rem;
   font-size: 1rem;
   resize: none;
+  background-color: white;
 }
 
 .new-review__textarea:focus {
   outline: none;
-  ring: 2px;
-  ring-color: #3b82f6;
-  border-color: transparent;
+  border-color: #b7a3e3;
+  box-shadow: 0 0 0 3px rgba(183, 163, 227, 0.1);
 }
 
 .new-review__actions {
@@ -132,37 +136,41 @@
 
 .new-review__submit-button {
   flex: 1;
-  background-color: #2563eb;
-  color: white;
+  background-color: #fff1cb;
+  color: #9376E0;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
+  border: 1px solid #9376E0;
   border-radius: 0.5rem;
-  border: none;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 
 .new-review__submit-button:hover:not(:disabled) {
-  background-color: #1d4ed8;
+  background-color: #fff5d6;
+  border: 1px solid #a082f0;
+  color: #a082f0;
 }
 
 .new-review__submit-button:disabled {
-  background-color: #9ca3af;
+  background-color: #cccccc;
+  color: white;
   cursor: not-allowed;
+  border: none;
 }
 
 .new-review__cancel-button {
   flex: 1;
-  background-color: #e5e7eb;
-  color: #1f2937;
+  background-color: #ff8f8f;
+  color: white;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
-  border: none;
+  border:  none;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 
 .new-review__cancel-button:hover {
-  background-color: #d1d5db;
+  background-color: #ff7a7a;
 }

@@ -8,7 +8,7 @@
 .sidebar-header__title {
   font-size: 1.125rem;
   font-weight: 700;
-  color: white;
+  color: #a6f1e0;
 }
 
 @media (min-width: 768px) {
@@ -18,11 +18,11 @@
 }
 
 .sidebar-header__title-accent {
-  color: #3b82f6;
+  color: #73C7C7;
 }
 
 .sidebar-header__subtitle {
-  color: #64748b;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.875rem;
 }
 
