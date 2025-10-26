@@ -1,0 +1,93 @@
+<section class="new-review">
+  <h1 class="new-review__title">Write your review</h1>
+  
+  <!-- New review form -->
+  <form [formGroup]="reviewForm" (ngSubmit)="onSubmit()" class="new-review__form">
+    <!-- Search by book title -->
+    <section class="new-review__field">
+      <label for="bookTitle" class="new-review__label">
+        Book title
+      </label>
+      <input
+        id="bookTitle"
+        type="text"
+        formControlName="bookTitle"
+        placeholder="Search for a book..."
+        class="new-review__input"
+        (blur)="onInputBlur()"
+      >
+      
+      @if (showDropdown() && searchResults().length > 0) {
+        <div class="new-review__dropdown">
+          @for(book of searchResults(); track book.title) {
+            <div 
+              class="new-review__dropdown-item"
+              (mousedown)="selectBook(book)"
+            >
+              <img [src]="book.cover" [alt]="book.title" class="new-review__dropdown-image">
+              <span class="new-review__dropdown-text">{{ book.title }}</span>
+            </div>
+          }
+        </div>
+      }
+    </section>
+
+    <!-- Star Rating -->
+    <section class="new-review__field">
+      <label class="new-review__label">
+        Rating
+      </label>
+      <div class="new-review__stars">
+        @for(star of getStarArray(); track star) {
+          <button
+            type="button"
+            (click)="setRating(star)"
+            class="new-review__star-button"
+          >
+            <svg 
+              class="new-review__star-icon" 
+              [class.new-review__star-icon--filled]="star <= selectedRating()"
+              [class.new-review__star-icon--empty]="star > selectedRating()"
+              fill="currentColor" 
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          </button>
+        }
+      </div>
+    </section>
+
+    <!-- Review Content -->
+    <section class="new-review__field">
+      <label for="content" class="new-review__label">
+        Your Review
+      </label>
+      <textarea
+        id="content"
+        formControlName="content"
+        rows="8"
+        placeholder="Write your thoughts about this book..."
+        class="new-review__textarea"
+      ></textarea>
+    </section>
+
+    <!-- Action Buttons -->
+    <section class="new-review__actions">
+      <button
+        type="submit"
+        [disabled]="!reviewForm.valid || selectedRating() === 0"
+        class="new-review__submit-button"
+      >
+        Create review
+      </button>
+      <button
+        type="button"
+        (click)="onCancel()"
+        class="new-review__cancel-button"
+      >
+        Cancel review
+      </button>
+    </section>
+  </form>
+</section>

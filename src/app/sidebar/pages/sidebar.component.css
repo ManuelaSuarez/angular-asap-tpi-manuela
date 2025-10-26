@@ -1,0 +1,41 @@
+.sidebar-layout {
+  background-color: #f1f5f9;
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  color: #cbd5e1;
+}
+
+.sidebar-layout::selection {
+  background-color: #2563eb;
+  color: white;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+}
+
+.sidebar-menu {
+  width: 220px;
+  background-color: #B7A3E3;
+  min-height: 100vh;
+  z-index: 10;
+  color: #cbd5e1;
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.sidebar-content {
+  margin-left: 220px;
+  padding: 1rem;
+  background-color: #FFF1CB;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

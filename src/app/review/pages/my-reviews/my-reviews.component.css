@@ -1,0 +1,34 @@
+.my-reviews {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.my-reviews__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  height: 100%;
+}
+
+.my-reviews__empty-text {
+  color: #666666;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.my-reviews__empty-button {
+  background-color: #ff8f8f;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.my-reviews__empty-button:hover {
+  background-color: #ff7a7a;
+}

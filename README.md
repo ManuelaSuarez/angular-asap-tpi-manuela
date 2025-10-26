@@ -1,10 +1,30 @@
 # AngularAsapTpiManuela
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+ng add @angular/material
+
+## Instalación del proyecto
+
+Pre-requisitos
+* Tener instalado globalmente o en la carpeta del proyecto el CLI de Angular
+
+```bash
+npm install -g @angular/cli
+```
+
+1. Clonar el repositorio
+
+```bash
+git clone URL
+```
+2. Instalar dependencias
+
+```bash
+npm install
+```
 
 ## Development server
 
-To start a local development server, run:
+Ejecutar el proyecto
 
 ```bash
 ng serve

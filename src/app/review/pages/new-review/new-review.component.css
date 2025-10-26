@@ -1,0 +1,168 @@
+.new-review {
+  padding: 1.5rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.new-review__title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.new-review__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.new-review__field {
+  position: relative;
+}
+
+.new-review__label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.new-review__input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.new-review__input:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #3b82f6;
+  border-color: transparent;
+}
+
+.new-review__dropdown {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  margin-top: 0.25rem;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  max-height: 15rem;
+  overflow-y: auto;
+}
+
+.new-review__dropdown-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.new-review__dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+.new-review__dropdown-image {
+  width: 2.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+.new-review__dropdown-text {
+  font-size: 0.875rem;
+}
+
+.new-review__stars {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.new-review__star-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.new-review__star-button:focus {
+  outline: none;
+}
+
+.new-review__star-icon {
+  width: 2rem;
+  height: 2rem;
+  transition: color 0.2s;
+}
+
+.new-review__star-icon--filled {
+  color: #fbbf24;
+}
+
+.new-review__star-icon--empty {
+  color: #d1d5db;
+}
+
+.new-review__textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  resize: none;
+}
+
+.new-review__textarea:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: #3b82f6;
+  border-color: transparent;
+}
+
+.new-review__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.new-review__submit-button {
+  flex: 1;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.new-review__submit-button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.new-review__submit-button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.new-review__cancel-button {
+  flex: 1;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.new-review__cancel-button:hover {
+  background-color: #d1d5db;
+}

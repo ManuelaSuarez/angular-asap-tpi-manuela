@@ -1,0 +1,128 @@
+.book-detail {
+  padding: 1.5rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.book-detail__back-button {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.book-detail__back-button:hover {
+  color: #ff8f8f;
+}
+
+.book-detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .book-detail__content {
+    flex-direction: row;
+  }
+}
+
+.book-detail__image-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .book-detail__image-container {
+    width: 33.333333%;
+  }
+}
+
+.book-detail__image {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  object-fit: cover;
+  aspect-ratio: 2 / 3;
+}
+
+.book-detail__info {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .book-detail__info {
+    width: 66.666667%;
+  }
+}
+
+.book-detail__title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333333;
+}
+
+.book-detail__author {
+  font-size: 1.125rem;
+  color: #666666;
+  margin-bottom: 1rem;
+}
+
+.book-detail__synopsis-section {
+  margin-bottom: 1.5rem;
+}
+
+.book-detail__synopsis-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333333;
+}
+
+.book-detail__synopsis-text {
+  color: #555555;
+  line-height: 1.625;
+}
+
+.book-detail__review-button {
+  background-color: #ff8f8f;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.book-detail__review-button:hover {
+  background-color: #ff7a7a;
+}
+
+.book-detail__not-found {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.book-detail__not-found-text {
+  color: #666666;
+}
+
+.book-detail__not-found-button {
+  margin-top: 1rem;
+  color: #b7a3e3;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.book-detail__not-found-button:hover {
+  color: #a38dd6;
+}

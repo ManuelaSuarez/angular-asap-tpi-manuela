@@ -1,0 +1,5 @@
+<article class="my-reviews__item" (click)="onReviewClick(review().id)">
+    <img [src]="review().bookCover" [alt]="review().bookTitle" class="my-reviews__item-image">
+    <h3 class="my-reviews__item-title">Review of {{ review().bookTitle }}</h3>
+    <p class="my-reviews__item-date">{{ review().date | date:'mediumDate' }}</p>
+</article>

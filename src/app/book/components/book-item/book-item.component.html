@@ -1,0 +1,5 @@
+<article class="book-item" (click)="onBookClick()">
+    <img class="book-item__image" [src]="book().cover" [alt]="book().title">
+    <h3 class="book-item__title">{{book().title}}</h3>
+    <p class="book-item__author">{{book().author}}</p>
+</article>

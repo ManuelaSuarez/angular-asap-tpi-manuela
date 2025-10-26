@@ -1,0 +1,127 @@
+.review-detail {
+  padding: 1.5rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.review-detail__back-button {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.review-detail__back-button:hover {
+  color: #111827;
+}
+
+.review-detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .review-detail__content {
+    flex-direction: row;
+  }
+}
+
+.review-detail__image-container {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .review-detail__image-container {
+    width: 33.333333%;
+  }
+}
+
+.review-detail__image {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  object-fit: cover;
+  aspect-ratio: 2 / 3;
+}
+
+.review-detail__info {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .review-detail__info {
+    width: 66.666667%;
+  }
+}
+
+.review-detail__title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.review-detail__date {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.review-detail__stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.review-detail__star-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.review-detail__star-icon--filled {
+  color: #fbbf24;
+}
+
+.review-detail__star-icon--empty {
+  color: #d1d5db;
+}
+
+.review-detail__content-box {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.review-detail__content-text {
+  color: #374151;
+  line-height: 1.625;
+  white-space: pre-wrap;
+}
+
+.review-detail__not-found {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.review-detail__not-found-text {
+  color: #4b5563;
+}
+
+.review-detail__not-found-button {
+  margin-top: 1rem;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.review-detail__not-found-button:hover {
+  color: #1d4ed8;
+}

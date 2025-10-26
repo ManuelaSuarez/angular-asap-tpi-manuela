@@ -1,0 +1,38 @@
+@if(loading()) {
+  <p>Loading...</p>
+} @else {
+  <div class="book-detail">
+    @if (book()) {
+      <button class="book-detail__back-button" (click)="goBack()">
+        ← Back to All Books
+      </button>
+      
+      <article class="book-detail__content">
+        <div class="book-detail__image-container">
+          <img [src]="book()!.cover" [alt]="book()!.title" class="book-detail__image">
+        </div>
+
+        <section class="book-detail__info">
+          <h1 class="book-detail__title">{{ book()!.title }}</h1>
+          <p class="book-detail__author">by {{ book()!.author }}</p>
+          
+          <section class="book-detail__synopsis-section">
+            <h2 class="book-detail__synopsis-title">Synopsis</h2>
+            <p class="book-detail__synopsis-text">{{ book()!.synopsis }}</p>
+          </section>
+          
+          <button (click)="onReviewClick()" class="book-detail__review-button">
+            Review
+          </button>
+        </section>
+      </article>
+    } @else {
+      <div class="book-detail__not-found">
+        <p class="book-detail__not-found-text">Book not found</p>
+        <button (click)="goBack()" class="book-detail__not-found-button">
+          Go back to All Books
+        </button>
+      </div>
+    }
+  </div>
+}

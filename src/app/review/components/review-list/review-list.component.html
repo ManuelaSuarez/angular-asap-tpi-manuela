@@ -1,0 +1,5 @@
+<section class="review-list">
+    @for(review of reviews(); track review.id) {
+        <review-item [review]="review" />
+    }
+</section>

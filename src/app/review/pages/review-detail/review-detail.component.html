@@ -1,0 +1,53 @@
+<article class="review-detail">
+  @if (review()) {
+    <button 
+      (click)="goBack()" 
+      class="review-detail__back-button"
+    >
+      ← Back to My Reviews
+    </button>
+    
+    <section class="review-detail__content">
+      <div class="review-detail__image-container">
+        <img 
+          [src]="review()!.bookCover" 
+          [alt]="review()!.bookTitle"
+          class="review-detail__image"
+        >
+      </div>
+      
+      <section class="review-detail__info">
+        <h1 class="review-detail__title">Review of {{ review()!.bookTitle }}</h1>
+        <p class="review-detail__date">{{ review()!.date | date:'fullDate' }}</p>
+        
+        <div class="review-detail__stars">
+          @for(filled of getStarArray(); track $index) {
+            <svg 
+              class="review-detail__star-icon" 
+              [class.review-detail__star-icon--filled]="filled"
+              [class.review-detail__star-icon--empty]="!filled"
+              fill="currentColor" 
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          }
+        </div>
+        
+        <div class="review-detail__content-box">
+          <p class="review-detail__content-text">{{ review()!.content }}</p>
+        </div>
+      </section>
+    </section>
+  } @else {
+    <div class="review-detail__not-found">
+      <p class="review-detail__not-found-text">Review not found</p>
+      <button 
+        (click)="goBack()"
+        class="review-detail__not-found-button"
+      >
+        Go back to My Reviews
+      </button>
+    </div>
+  }
+</article>

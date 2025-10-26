@@ -1,0 +1,12 @@
+<div id="nav" class="sidebar-nav">
+    @for(option of menuOptions; track option.label) {
+        <a [routerLink]="option.route" routerLinkActive="sidebar-nav__link--active" [routerLinkActiveOptions]="{exact:true}"
+            class="sidebar-nav__link">
+            <mat-icon aria-hidden="false" aria-label="{{option.icon}} icon" [fontIcon]="option.icon" />
+            <div class="sidebar-nav__content">
+                <span class="sidebar-nav__label">{{option.label}}</span>
+                <span class="sidebar-nav__sublabel">{{option.subLabel}}</span>
+            </div>
+        </a>
+    }
+</div>

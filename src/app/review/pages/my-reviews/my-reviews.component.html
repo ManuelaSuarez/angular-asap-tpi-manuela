@@ -1,0 +1,12 @@
+<section class="my-reviews">
+  @if (reviews().length === 0) {
+    <div class="my-reviews__empty">
+      <p class="my-reviews__empty-text">No reviews yet... Start writing your first one!</p>
+      <button (click)="onNewReviewClick()" class="my-reviews__empty-button">
+        New Review
+      </button>
+    </div>
+  } @else {
+    <review-list [reviews]="reviews()" />
+  }
+</section>

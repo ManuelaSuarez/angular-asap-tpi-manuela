@@ -1,0 +1,6 @@
+<section class="book-list"
+    (scroll)="handleScroll()" #booksContainer>
+    @for(book of books(); track book.id) {
+        <book-item [book]="book" />
+    }
+</section>
