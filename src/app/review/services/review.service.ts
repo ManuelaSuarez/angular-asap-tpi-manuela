@@ -38,6 +38,11 @@ export class ReviewService {
     this.saveReviewsToStorage()
   }
 
+  updateReview(id: string, content: string) {
+    this.reviews.update((prev) => prev.map((review) => (review.id === id ? { ...review, content } : review)))
+    this.saveReviewsToStorage()
+  }
+
   private saveReviewsToStorage() {
     localStorage.setItem("bookReviews", JSON.stringify(this.reviews()))
   }

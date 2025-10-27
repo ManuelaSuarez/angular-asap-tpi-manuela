@@ -14,6 +14,23 @@
           [alt]="review()!.bookTitle"
           class="review-detail__image"
         >
+        
+        <!-- Added action buttons below book cover -->
+        <div class="review-detail__actions">
+          <button 
+            (click)="deleteReview()"
+            class="review-detail__action-button review-detail__action-button--delete"
+          >
+            Delete Review
+          </button>
+          <button 
+            (click)="startEdit()"
+            class="review-detail__action-button review-detail__action-button--edit"
+            [disabled]="isEditing()"
+          >
+            Update Review
+          </button>
+        </div>
       </div>
       
       <section class="review-detail__info">
@@ -34,9 +51,35 @@
           }
         </div>
         
-        <div class="review-detail__content-box">
-          <p class="review-detail__content-text">{{ review()!.content }}</p>
-        </div>
+        <!-- Added conditional rendering for edit mode -->
+        @if (isEditing()) {
+          <div class="review-detail__edit-box">
+            <textarea 
+              [(ngModel)]="editContent"
+              class="review-detail__edit-textarea"
+              rows="10"
+              placeholder="Edit your review content..."
+            ></textarea>
+            <div class="review-detail__edit-actions">
+              <button 
+                (click)="saveEdit()"
+                class="review-detail__edit-button review-detail__edit-button--save"
+              >
+                Save Changes
+              </button>
+              <button 
+                (click)="cancelEdit()"
+                class="review-detail__edit-button review-detail__edit-button--cancel"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        } @else {
+          <div class="review-detail__content-box">
+            <p class="review-detail__content-text">{{ review()!.content }}</p>
+          </div>
+        }
       </section>
     </section>
   } @else {
